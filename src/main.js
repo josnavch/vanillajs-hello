@@ -47,5 +47,25 @@ window.onload = function() {
     console.log(auto.marca);
   });
 
+  let myNewAutos = autos.map(item => {
+    return "<li>" + item.marca + " tengo el modelo " + item.modelo + "</li>";
+  });
+  console.log(autos);
+  console.log(myNewAutos);
+
+  let myNewAutos320 = autos.map(item => {
+    if (item.velmax > 320) {
+      return (
+        "<li>" +
+        item.marca +
+        " tengo el modelo " +
+        item.modelo +
+        " con velocidad mayor a 320" +
+        "</li>"
+      );
+    }
+  });
+  console.log(myNewAutos320);
+
   console.log("Hello Rigo from the console!");
 };
